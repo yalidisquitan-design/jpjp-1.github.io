@@ -12,15 +12,6 @@
     <title>AI整理のマーケットサマリーを無料配信 | MarketSync AI</title>
     <link rel="stylesheet" href="style.css?v=4.9">
     <meta name="description" content="AIが市場情報を整理する無料サービス。投資助言ではありません。情報整理の参考サービスです。">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX8YG9VHSF"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-SX8YG9VHSF');
-    </script>
 </head>
 <body>
     <!-- Main container: Contains all page content -->
@@ -94,7 +85,7 @@
                 <h2 class="confirm-title" id="confirmTitle">「安定重視・長期的視点」の情報サンプル</h2>
                 <p class="confirm-description">AIが実際にこの視点で情報を整理した例を、LINEでお送りします。</p>
                 <!-- LINE Button: External link to LINE official account (rel="noopener noreferrer" for security) -->
-                <a href="https://jp-x.vip/vf7HPj" target="_blank" rel="noopener noreferrer" class="confirm-line-btn" onclick="return gtag_report_conversion('https://jp-x.vip/vf7HPj', true);">
+                <a href="https://jp-x.vip/vf7HPj" target="_blank" rel="noopener noreferrer" class="confirm-line-btn">
                     <span class="line-icon">LINE</span>
                     <span class="line-text">無料サンプルを受け取る</span>
                 </a>
@@ -180,24 +171,6 @@
     </div>
     <!-- JavaScript: Modal management and user interaction handlers -->
     <script>
-        // Google Ads Conversion Tracking Function
-        function gtag_report_conversion(url, openInNewTab) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    if (openInNewTab) {
-                        window.open(url, '_blank', 'noopener,noreferrer');
-                    } else {
-                        window.location = url;
-                    }
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-11421398475/FPMICJ-emL4bEMvrksYq',
-                'event_callback': callback
-            });
-            return false;
-        }
-        
         // IIFE (Immediately Invoked Function Expression) to avoid global scope pollution
         (function(){
             // DOM Element References: Get modal and button elements
