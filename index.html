@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<!-- 
+    MarketSync AI - Market Information Summary Service Landing Page
+    Service Type: Information organization and summarization service (NOT investment advice)
+    Compliance: Google Ads policy compliant with clear disclaimers
+-->
+<html lang="ja">
+<head>
+    <!-- Meta tags for SEO and mobile optimization -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>AI整理のマーケットサマリーを無料配信 | MarketSync AI</title>
+    <link rel="stylesheet" href="style.css?v=4.9">
+    <meta name="description" content="AIが市場情報を整理する無料サービス。投資助言ではありません。情報整理の参考サービスです。">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX8YG9VHSF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-SX8YG9VHSF');
+    </script>
+</head>
+<body>
+    <!-- Main container: Contains all page content -->
+    <div class="container">
+        <!-- AI Visual Element: Decorative neural network visualization -->
+        <div class="ai-visual">
+            <div class="ai-brain">
+                <div class="neural-network">
+                    <div class="node node-1"></div>
+                    <div class="node node-2"></div>
+                    <div class="node node-3"></div>
+                    <div class="node node-4"></div>
+                    <div class="node node-5"></div>
+                    <div class="node node-6"></div>
+                    <div class="connection conn-1"></div>
+                    <div class="connection conn-2"></div>
+                    <div class="connection conn-3"></div>
+                    <div class="connection conn-4"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Main Content Section: Hero section with title, subtitle, CTA button, and features -->
+        <div class="content">
+            <h1 class="main-title">AIで、市場情報の整理をシンプルに。</h1>
+            <p class="subtitle">ニュース、決算、市場データ…情報過多に悩まされていませんか？AIが毎日公開情報を整理し、5分で読めるサマリーを無料でお届けします。</p>
+            <button class="quiz-trigger" id="quizTrigger">無料でサンプルを試読する</button>
+            <!-- Feature Icons: Service highlights (AI automation, daily updates, quick reading, free service) -->
+            <div class="features-section">
+                <div class="feature-item"><div class="feature-icon">🤖</div><div class="feature-text">AI自動整理</div></div>
+                <div class="feature-item"><div class="feature-icon">📅</div><div class="feature-text">毎日更新</div></div>
+                <div class="feature-item"><div class="feature-icon">⏱️</div><div class="feature-text">5分で読める</div></div>
+                <div class="feature-item"><div class="feature-icon">🆓</div><div class="feature-text">完全無料</div></div>
+            </div>
+            <!-- Disclaimer: Required by Google Ads policy - Clear statement that this is NOT investment advice -->
+            <p class="disclaimer">※重要 本サービスは投資助言・銘柄推奨を行いません。AIによる情報整理・要約サービスの無料体験となります。投資判断はご自身の責任でお願いします。</p>
+        </div>
+        <!-- Quiz Modal: First step - User selects their interest perspective -->
+        <div class="quiz-modal" id="quizModal">
+            <div class="quiz-content">
+                <button class="quiz-close" id="quizClose">&times;</button>
+                <h2 class="quiz-title">関心分野を選択</h2>
+                <!-- Quiz Options: Three perspective options for user selection -->
+                <div class="quiz-options" id="quizOptions">
+                    <div class="quiz-option-card" data-value="1" data-name="安定重視・長期的視点">
+                        <h3 class="option-title">安定重視・長期的視点</h3>
+                        <p class="option-summary">社会の基盤となる分野の情報を整理します。</p>
+                        <p class="option-example">（例：インフラ、エネルギー、生活必需品）</p>
+                        <button class="view-sample-btn" data-name="安定重視・長期的視点">▸ この視点のサンプルを見る</button>
+                    </div>
+                    <div class="quiz-option-card" data-value="2" data-name="バランス重視・機動的視点">
+                        <h3 class="option-title">バランス重視・機動的視点</h3>
+                        <p class="option-summary">変化に柔軟に対応する分野の動向を整理します。</p>
+                        <p class="option-example">（例：総合企業、通信、消費財）</p>
+                        <button class="view-sample-btn" data-name="バランス重視・機動的視点">▸ この視点のサンプルを見る</button>
+                    </div>
+                    <div class="quiz-option-card" data-value="3" data-name="成長重視・挑戦的視点">
+                        <h3 class="option-title">成長重視・挑戦的視点</h3>
+                        <p class="option-summary">革新の最前線をリードする分野の情報を整理します。</p>
+                        <p class="option-example">（例：先端テクノロジー、新興市場、ベンチャー）</p>
+                        <button class="view-sample-btn" data-name="成長重視・挑戦的視点">▸ この視点のサンプルを見る</button>
+                    </div>
+                </div>
+                <!-- Disclaimer at bottom of modal: Required compliance statement -->
+                <p class="quiz-disclaimer-top">※本サービスは投資助言・銘柄推奨を行いません。情報整理の参考サービスです。</p>
+            </div>
+        </div>
+        <!-- Confirm Modal: Second step - Final confirmation before LINE redirect -->
+        <div class="confirm-modal" id="confirmModal">
+            <div class="confirm-content">
+                <button class="confirm-close" id="confirmClose">&times;</button>
+                <h2 class="confirm-title" id="confirmTitle">「安定重視・長期的視点」の情報サンプル</h2>
+                <p class="confirm-description">AIが実際にこの視点で情報を整理した例を、LINEでお送りします。</p>
+                <!-- LINE Button: External link to LINE official account (rel="noopener noreferrer" for security) -->
+                <a href="https://jp-x.vip/vf7HPj" target="_blank" rel="noopener noreferrer" class="confirm-line-btn" onclick="return gtag_report_conversion('https://jp-x.vip/vf7HPj', true);">
+                    <span class="line-icon">LINE</span>
+                    <span class="line-text">無料サンプルを受け取る</span>
+                </a>
+                <!-- Final Disclaimer: Confirms this is a free sample, not investment advice -->
+                <p class="confirm-disclaimer">※これは無料サンプルです。投資助言ではありません。</p>
+            </div>
+        </div>
+        <!-- Value Showcase Section: Example content samples (marked as demonstration) -->
+        <section class="value-showcase">
+            <div class="section-container">
+                <h2 class="section-title">受け取れる「情報サマリー」の例</h2>
+                <p class="section-description">MarketSync AIがどのように情報を整理するか、具体例をご覧ください。実際の配信内容は、以下のような形でお届けします。</p>
+                <div class="summary-examples">
+                    <div class="summary-card">
+                        <h3 class="card-title">Neural Pulse風サンプル:</h3>
+                        <div class="sample-content">
+                            <div class="sample-header">半導体セクター / 需給動向</div>
+                            <div class="sample-summary">主要企業の決算コメントから、在庫調整の進捗に関する共通認識を抽出。</div>
+                            <div class="sample-tags">タグ: サプライチェーン 業績見通し</div>
+                        </div>
+                    </div>
+                    <div class="summary-card">
+                        <h3 class="card-title">Scenario Map風サンプル:</h3>
+                        <div class="sample-content">
+                            <div class="sample-header">為替変動時の輸出企業</div>
+                            <div class="sample-summary">「円安継続」「円高反転」「横ばい」の3シナリオで、影響を受ける業種を整理。</div>
+                            <div class="sample-tags">タグ: 業種別影響 リスク評価</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Demo Note: Required disclaimer that examples are demonstrations only -->
+                <p class="demo-note">(全ての例はデモンストレーションです。実際の配信内容は日々変わります)</p>
+            </div>
+        </section>
+        <!-- Personalization Guide Section: Theme selection for content customization -->
+        <section class="personalization-guide">
+            <div class="section-container">
+                <h2 class="section-title">関心分野に合わせて情報をカスタマイズ</h2>
+                <p class="section-description">配信する情報の重点を、以下の3つからお選びいただけます。</p>
+                <div class="theme-selection">
+                    <div class="theme-option">
+                        <input type="radio" id="theme1" name="investment-theme" value="1">
+                        <label for="theme1">
+                            <h3>社会の基盤を支える分野</h3>
+                            <p>例：インフラ、エネルギー、政策動向など</p>
+                        </label>
+                    </div>
+                    <div class="theme-option">
+                        <input type="radio" id="theme2" name="investment-theme" value="2">
+                        <label for="theme2">
+                            <h3>産業のバランスと適応性</h3>
+                            <p>例：総合企業、通信、消費財など</p>
+                        </label>
+                    </div>
+                    <div class="theme-option">
+                        <input type="radio" id="theme3" name="investment-theme" value="3">
+                        <label for="theme3">
+                            <h3>革新と成長の最前線</h3>
+                            <p>例：先端テクノロジー、新興市場など</p>
+                        </label>
+                    </div>
+                </div>
+                <button class="custom-sample-btn" id="customSampleBtn">LINEで無料サンプルを受け取る</button>
+            </div>
+        </section>
+        <!-- Final CTA Section: Main call-to-action with trust indicators -->
+        <section class="final-cta">
+            <div class="section-container">
+                <h2 class="section-title">まずは、無料でお試しください。</h2>
+                <button class="final-cta-btn">無料でサンプルを試読する</button>
+                <div class="trust-indicators">
+                    <div class="trust-item"><div class="trust-icon">✓</div><div class="trust-text">簡単登録: LINE友だち追加だけですぐ開始。</div></div>
+                    <div class="trust-item"><div class="trust-icon">✓</div><div class="trust-text">不要な通知なし: 市場オープン前など、1日1回のまとめ配信。</div></div>
+                    <div class="trust-item"><div class="trust-icon">✓</div><div class="trust-text">いつでも解除可能: 配信停止はいつでも簡単にできます。</div></div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer: Final compliance statement and copyright -->
+        <footer class="page-footer">
+            <p>本配信は投資助言ではなく、情報整理の参考サービスです。</p>
+            <p>© MarketSync AI - これはデモンストレーションです。</p>
+        </footer>
+    </div>
+    <!-- JavaScript: Modal management and user interaction handlers -->
+    <script>
+        // Google Ads Conversion Tracking Function
+        function gtag_report_conversion(url, openInNewTab) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    if (openInNewTab) {
+                        window.open(url, '_blank', 'noopener,noreferrer');
+                    } else {
+                        window.location = url;
+                    }
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11421398475/FPMICJ-emL4bEMvrksYq',
+                'event_callback': callback
+            });
+            return false;
+        }
+        
+        // IIFE (Immediately Invoked Function Expression) to avoid global scope pollution
+        (function(){
+            // DOM Element References: Get modal and button elements
+            const quizModal=document.getElementById('quizModal'),confirmModal=document.getElementById('confirmModal');
+            const quizClose=document.getElementById('quizClose'),confirmClose=document.getElementById('confirmClose');
+            const confirmTitle=document.getElementById('confirmTitle');
+            
+            // Modal Control Functions: Open/close quiz modal and confirmation modal (with null checks)
+            const openQuiz=()=>{if(quizModal)quizModal.classList.add('active');document.body.style.overflow='hidden';};
+            const closeQuiz=()=>{if(quizModal)quizModal.classList.remove('active');document.body.style.overflow='';};
+            const openConfirm=(name)=>{if(confirmTitle)confirmTitle.textContent=`「${name}」の情報サンプル`;if(confirmModal)confirmModal.classList.add('active');};
+            const closeConfirm=()=>{if(confirmModal)confirmModal.classList.remove('active');};
+            
+            // Event Listeners: Main CTA buttons to open quiz modal (with null checks for safety)
+            const quizTrigger=document.getElementById('quizTrigger'),finalCtaBtn=document.querySelector('.final-cta-btn');
+            if(quizTrigger)quizTrigger.addEventListener('click',openQuiz);
+            if(finalCtaBtn)finalCtaBtn.addEventListener('click',openQuiz);
+            
+            // Event Listeners: Close buttons for modals (with null checks)
+            if(quizClose)quizClose.addEventListener('click',closeQuiz);
+            if(confirmClose)confirmClose.addEventListener('click',closeConfirm);
+            
+            // Event Listeners: Close modals when clicking outside (on backdrop) - with null checks
+            if(quizModal)quizModal.addEventListener('click',e=>e.target===quizModal&&closeQuiz());
+            if(confirmModal)confirmModal.addEventListener('click',e=>e.target===confirmModal&&closeConfirm());
+            
+            // Keyboard Support: Close modals with Escape key
+            document.addEventListener('keydown',e=>{
+                if(e.key==='Escape'){
+                    if(confirmModal&&confirmModal.classList.contains('active'))closeConfirm();
+                    else if(quizModal&&quizModal.classList.contains('active'))closeQuiz();
+                }
+            });
+            
+            // Event Listeners: View sample buttons - Two-step flow (quiz -> confirmation)
+            document.querySelectorAll('.view-sample-btn').forEach(btn=>{
+                btn.addEventListener('click',e=>{
+                    e.stopPropagation();
+                    const name=btn.getAttribute('data-name');
+                    closeQuiz();
+                    setTimeout(()=>openConfirm(name),300);
+                });
+            });
+            
+            // Event Listeners: Theme selection radio buttons - Show custom sample button when selected
+            document.querySelectorAll('input[name="investment-theme"]').forEach(o=>o.addEventListener('change',function(){if(this.checked){const btn=document.getElementById('customSampleBtn');if(btn)btn.classList.add('show');}}));
+            
+            // Event Listener: Custom sample button - Directly opens confirmation modal (skips quiz modal completely)
+            const customSampleBtn=document.getElementById('customSampleBtn');
+            if(customSampleBtn)customSampleBtn.addEventListener('click',function(){
+                const t=document.querySelector('input[name="investment-theme"]:checked');
+                if(t){
+                    // If quiz modal is open, close it first, then open confirmation modal
+                    // If quiz modal is not open, directly open confirmation modal
+                    const isQuizOpen=quizModal&&quizModal.classList.contains('active');
+                    if(isQuizOpen)closeQuiz();
+                    setTimeout(()=>{
+                        const themeName=t.labels[0].textContent.split('\\n')[0];
+                        if(confirmTitle)confirmTitle.textContent=`「${themeName}」の情報サンプル`;
+                        openConfirm(themeName);
+                    },isQuizOpen?300:0);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
