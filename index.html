@@ -10,10 +10,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>AI整理のマーケットサマリーを無料配信 | MarketSync AI</title>
-    <link rel="stylesheet" href="style.css?v=4.9">
-    <meta name="description" content="AIが市場情報を整理する無料サービス。投資助言ではありません。情報整理の参考サービスです。">
+    <link rel="stylesheet" href="style.css?v=5.0">
+    <meta name="description" content="MarketSync AIは、最新のAI技術を活用して市場情報を自動整理・要約する無料サービスです。毎日更新されるニュース、決算情報、市場データを5分で読めるサマリー形式で配信。投資助言ではなく、情報整理の参考サービスとして提供しています。">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17674936398"></script>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -25,27 +26,48 @@
 <body>
     <!-- Main container: Contains all page content -->
     <div class="container">
-        <!-- AI Visual Element: Decorative neural network visualization -->
+        <!-- AI Visual Element: Logo/Avatar image -->
         <div class="ai-visual">
-            <div class="ai-brain">
-                <div class="neural-network">
-                    <div class="node node-1"></div>
-                    <div class="node node-2"></div>
-                    <div class="node node-3"></div>
-                    <div class="node node-4"></div>
-                    <div class="node node-5"></div>
-                    <div class="node node-6"></div>
-                    <div class="connection conn-1"></div>
-                    <div class="connection conn-2"></div>
-                    <div class="connection conn-3"></div>
-                    <div class="connection conn-4"></div>
-                </div>
-            </div>
+            <svg class="logo-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+                        <stop offset="50%" style="stop-color:#2563eb;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:1" />
+                    </linearGradient>
+                    <radialGradient id="glowGradient" cx="50%" cy="50%">
+                        <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.5" />
+                        <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:0" />
+                    </radialGradient>
+                </defs>
+                <!-- Background glow -->
+                <circle cx="100" cy="100" r="90" fill="url(#glowGradient)"/>
+                <!-- Main circle -->
+                <circle cx="100" cy="100" r="80" fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.3"/>
+                <!-- Outer ring -->
+                <circle cx="100" cy="100" r="70" fill="none" stroke="url(#logoGradient)" stroke-width="3" opacity="0.5"/>
+                <!-- Data nodes in circle pattern -->
+                <circle cx="100" cy="50" r="6" fill="url(#logoGradient)"/>
+                <circle cx="140" cy="70" r="6" fill="url(#logoGradient)"/>
+                <circle cx="155" cy="110" r="6" fill="url(#logoGradient)"/>
+                <circle cx="140" cy="150" r="6" fill="url(#logoGradient)"/>
+                <circle cx="100" cy="170" r="6" fill="url(#logoGradient)"/>
+                <circle cx="60" cy="150" r="6" fill="url(#logoGradient)"/>
+                <circle cx="45" cy="110" r="6" fill="url(#logoGradient)"/>
+                <circle cx="60" cy="70" r="6" fill="url(#logoGradient)"/>
+                <!-- Connection lines -->
+                <path d="M 100 50 L 140 70 L 155 110 L 140 150 L 100 170 L 60 150 L 45 110 L 60 70 Z" fill="none" stroke="url(#logoGradient)" stroke-width="2" opacity="0.4" stroke-linejoin="round"/>
+                <!-- Center core -->
+                <circle cx="100" cy="110" r="20" fill="url(#logoGradient)" opacity="0.2"/>
+                <circle cx="100" cy="110" r="12" fill="url(#logoGradient)"/>
+                <!-- Inner detail lines -->
+                <path d="M 100 98 L 100 122 M 88 110 L 112 110" stroke="rgba(255,255,255,0.6)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
         </div>
         <!-- Main Content Section: Hero section with title, subtitle, CTA button, and features -->
         <div class="content">
             <h1 class="main-title">AIで、市場情報の整理をシンプルに。</h1>
-            <p class="subtitle">ニュース、決算、市場データ…情報過多に悩まされていませんか？AIが毎日公開情報を整理し、5分で読めるサマリーを無料でお届けします。</p>
+            <p class="subtitle">市場ニュース、決算、経済指標…情報過多で困っていませんか？AIが毎日公開情報を自動整理し、5分で読めるサマリーを無料でお届けします。あなたの関心分野に合わせて、効率的な情報収集をサポートします。</p>
             <button class="quiz-trigger" id="quizTrigger">無料でサンプルを試読する</button>
             <!-- Feature Icons: Service highlights (AI automation, daily updates, quick reading, free service) -->
             <div class="features-section">
@@ -66,20 +88,20 @@
                 <div class="quiz-options" id="quizOptions">
                     <div class="quiz-option-card" data-value="1" data-name="安定重視・長期的視点">
                         <h3 class="option-title">安定重視・長期的視点</h3>
-                        <p class="option-summary">社会の基盤となる分野の情報を整理します。</p>
-                        <p class="option-example">（例：インフラ、エネルギー、生活必需品）</p>
+                        <p class="option-summary">社会の基盤となる分野の情報を、長期的な視点から整理・分析します。インフラ整備、エネルギー政策、公共事業、生活必需品産業など、社会の安定性に直結する領域の動向を重点的に追跡します。</p>
+                        <p class="option-example">（例：インフラ、エネルギー、生活必需品、公共事業、政策動向）</p>
                         <button class="view-sample-btn" data-name="安定重視・長期的視点">▸ この視点のサンプルを見る</button>
                     </div>
                     <div class="quiz-option-card" data-value="2" data-name="バランス重視・機動的視点">
                         <h3 class="option-title">バランス重視・機動的視点</h3>
-                        <p class="option-summary">変化に柔軟に対応する分野の動向を整理します。</p>
-                        <p class="option-example">（例：総合企業、通信、消費財）</p>
+                        <p class="option-summary">変化に柔軟に対応する分野の動向を、多角的な視点から整理します。総合企業の事業ポートフォリオ、通信インフラの進化、消費トレンドの変化など、市場環境の変化に適応する企業や業界の情報を重点的に扱います。</p>
+                        <p class="option-example">（例：総合企業、通信、消費財、小売、サービス業）</p>
                         <button class="view-sample-btn" data-name="バランス重視・機動的視点">▸ この視点のサンプルを見る</button>
                     </div>
                     <div class="quiz-option-card" data-value="3" data-name="成長重視・挑戦的視点">
                         <h3 class="option-title">成長重視・挑戦的視点</h3>
-                        <p class="option-summary">革新の最前線をリードする分野の情報を整理します。</p>
-                        <p class="option-example">（例：先端テクノロジー、新興市場、ベンチャー）</p>
+                        <p class="option-summary">革新の最前線をリードする分野の情報を、成長機会とリスクの両面から整理します。先端テクノロジー、新興市場、ベンチャー企業、イノベーション創出領域など、将来の成長を牽引する可能性のある領域の動向を重点的に追跡します。</p>
+                        <p class="option-example">（例：先端テクノロジー、新興市場、ベンチャー、バイオテクノロジー、AI・機械学習）</p>
                         <button class="view-sample-btn" data-name="成長重視・挑戦的視点">▸ この視点のサンプルを見る</button>
                     </div>
                 </div>
@@ -102,26 +124,50 @@
                 <p class="confirm-disclaimer">※これは無料サンプルです。投資助言ではありません。</p>
             </div>
         </div>
+        <!-- How It Works Section: Service mechanism explanation -->
+        <section class="how-it-works">
+            <div class="section-container">
+                <h2 class="section-title">MarketSync AIの仕組み</h2>
+                <p class="section-description">私たちのAIシステムは、複数の公開情報源から市場関連データを収集し、自然言語処理と機械学習技術を組み合わせて、重要な情報を自動的に抽出・整理します。</p>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">情報収集</h3>
+                        <p class="step-description">企業の決算発表、経済指標、業界レポート、ニュース記事など、複数の信頼できる情報源から最新データを自動収集します。</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">AI分析・整理</h3>
+                        <p class="step-description">収集した情報をAIが分析し、重要度、関連性、時系列を考慮しながら構造化。重複情報を排除し、核心的なポイントを抽出します。</p>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3 class="step-title">パーソナライズ配信</h3>
+                        <p class="step-description">あなたが選択した関心分野に基づいて、関連性の高い情報を優先的にまとめ、読みやすい形式でLINEに配信します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- Value Showcase Section: Example content samples (marked as demonstration) -->
         <section class="value-showcase">
             <div class="section-container">
                 <h2 class="section-title">受け取れる「情報サマリー」の例</h2>
-                <p class="section-description">MarketSync AIがどのように情報を整理するか、具体例をご覧ください。実際の配信内容は、以下のような形でお届けします。</p>
+                <p class="section-description">MarketSync AIがどのように情報を整理するか、具体例をご覧ください。実際の配信内容は、以下のような形でお届けします。各サマリーは、複数の情報源から抽出された要点を、時系列や関連性に基づいて構造化したものです。</p>
                 <div class="summary-examples">
                     <div class="summary-card">
-                        <h3 class="card-title">Neural Pulse風サンプル:</h3>
+                        <h3 class="card-title">セクター分析サンプル</h3>
                         <div class="sample-content">
-                            <div class="sample-header">半導体セクター / 需給動向</div>
-                            <div class="sample-summary">主要企業の決算コメントから、在庫調整の進捗に関する共通認識を抽出。</div>
-                            <div class="sample-tags">タグ: サプライチェーン 業績見通し</div>
+                            <div class="sample-header">半導体セクター / 需給動向分析</div>
+                            <div class="sample-summary">主要企業の決算コメント、業界レポート、市場データを統合分析。在庫調整の進捗状況、需要予測の共通認識、サプライチェーン上の課題を抽出し、時系列で整理。関連する政策動向や技術トレンドも併せて提示します。</div>
+                            <div class="sample-tags">タグ: サプライチェーン 業績見通し 需給バランス</div>
                         </div>
                     </div>
                     <div class="summary-card">
-                        <h3 class="card-title">Scenario Map風サンプル:</h3>
+                        <h3 class="card-title">シナリオ分析サンプル</h3>
                         <div class="sample-content">
-                            <div class="sample-header">為替変動時の輸出企業</div>
-                            <div class="sample-summary">「円安継続」「円高反転」「横ばい」の3シナリオで、影響を受ける業種を整理。</div>
-                            <div class="sample-tags">タグ: 業種別影響 リスク評価</div>
+                            <div class="sample-header">為替変動が輸出企業に与える影響</div>
+                            <div class="sample-summary">複数の経済予測データと企業業績を基に、「円安継続」「円高反転」「横ばい」の3つのシナリオを構築。各シナリオ下で影響を受ける業種、企業規模別の影響度、過去の類似事例との比較を整理。リスク要因と機会要因を明確に区分します。</div>
+                            <div class="sample-tags">タグ: 業種別影響 リスク評価 為替シナリオ</div>
                         </div>
                     </div>
                 </div>
@@ -133,31 +179,88 @@
         <section class="personalization-guide">
             <div class="section-container">
                 <h2 class="section-title">関心分野に合わせて情報をカスタマイズ</h2>
-                <p class="section-description">配信する情報の重点を、以下の3つからお選びいただけます。</p>
+                <p class="section-description">MarketSync AIでは、あなたの関心や目的に合わせて、配信する情報の重点を選択できます。以下の3つの視点から、最も興味のあるものをお選びください。選択した視点に基づいて、AIが関連性の高い情報を優先的に整理・配信します。</p>
                 <div class="theme-selection">
                     <div class="theme-option">
                         <input type="radio" id="theme1" name="investment-theme" value="1">
                         <label for="theme1">
                             <h3>社会の基盤を支える分野</h3>
-                            <p>例：インフラ、エネルギー、政策動向など</p>
+                            <p>社会インフラ、エネルギー供給、公共政策、生活必需品産業など、社会の安定性と持続可能性に関わる分野の情報を重点的に整理します。長期的な視点から、社会基盤の変化や政策動向を追跡します。</p>
                         </label>
                     </div>
                     <div class="theme-option">
                         <input type="radio" id="theme2" name="investment-theme" value="2">
                         <label for="theme2">
                             <h3>産業のバランスと適応性</h3>
-                            <p>例：総合企業、通信、消費財など</p>
+                            <p>総合企業、通信インフラ、消費財、小売・サービス業など、市場環境の変化に柔軟に対応する産業の動向を整理します。多様な事業ポートフォリオを持つ企業や、消費トレンドに敏感な業界の情報を重点的に扱います。</p>
                         </label>
                     </div>
                     <div class="theme-option">
                         <input type="radio" id="theme3" name="investment-theme" value="3">
                         <label for="theme3">
                             <h3>革新と成長の最前線</h3>
-                            <p>例：先端テクノロジー、新興市場など</p>
+                            <p>先端テクノロジー、新興市場、ベンチャー企業、バイオテクノロジー、AI・機械学習など、イノベーションを牽引する分野の情報を整理します。将来の成長可能性とリスクの両面から、革新的な領域の動向を追跡します。</p>
                         </label>
                     </div>
                 </div>
                 <button class="custom-sample-btn" id="customSampleBtn">LINEで無料サンプルを受け取る</button>
+            </div>
+        </section>
+        <!-- Use Cases Section: Detailed use case scenarios -->
+        <section class="use-cases">
+            <div class="section-container">
+                <h2 class="section-title">こんな方におすすめ</h2>
+                <p class="section-description">MarketSync AIは、市場情報に関心を持つ様々な方々の情報収集をサポートします。</p>
+                <div class="use-case-list">
+                    <div class="use-case-item">
+                        <h3 class="use-case-title">忙しいビジネスパーソン</h3>
+                        <p class="use-case-text">日々の業務で多忙な中、市場動向を把握したいが時間がない。通勤時間や休憩時間の5分で、その日の重要な市場情報を効率的に把握できます。</p>
+                    </div>
+                    <div class="use-case-item">
+                        <h3 class="use-case-title">情報収集の効率化を求める方</h3>
+                        <p class="use-case-text">複数のニュースサイトやレポートをチェックする時間を節約したい。AIが複数の情報源から要点を抽出し、一つのサマリーにまとめるため、情報収集の時間を大幅に短縮できます。</p>
+                    </div>
+                    <div class="use-case-item">
+                        <h3 class="use-case-title">特定分野の動向を追いたい方</h3>
+                        <p class="use-case-text">自分の関心のある分野（インフラ、テクノロジー、消費財など）の情報を集中的に知りたい。選択した視点に基づいて、関連性の高い情報を優先的に配信します。</p>
+                    </div>
+                    <div class="use-case-item">
+                        <h3 class="use-case-title">情報の整理方法を学びたい方</h3>
+                        <p class="use-case-text">市場情報をどのように整理・分析すればよいか参考にしたい。AIが情報を構造化する方法を実際のサマリーで確認でき、情報整理のスキル向上にも役立ちます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ Section: Frequently asked questions -->
+        <section class="faq-section">
+            <div class="section-container">
+                <h2 class="section-title">よくある質問</h2>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q. このサービスは投資助言を提供しますか？</h3>
+                        <p class="faq-answer">A. いいえ、MarketSync AIは投資助言や銘柄推奨を行いません。公開されている情報を整理・要約する情報整理サービスです。投資判断は、ご自身の責任で行ってください。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q. どのような情報源から情報を収集していますか？</h3>
+                        <p class="faq-answer">A. 企業の公式発表（決算、IR情報）、公的機関の経済指標、信頼できるニュースメディアの記事、業界レポートなど、公開されている情報源から収集しています。情報の出典は各サマリーに明記されます。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q. 配信頻度はどのくらいですか？</h3>
+                        <p class="faq-answer">A. 基本的に平日の市場オープン前（朝）に1日1回配信します。週末や祝日は配信しません。重要な市場イベントがある場合は、追加で配信する場合があります。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q. 無料で利用できますか？</h3>
+                        <p class="faq-answer">A. はい、完全無料でご利用いただけます。LINE友だち追加だけで、すぐにサービスを開始できます。将来的に有料プランを導入する場合でも、現在の無料プランは継続してご利用いただけます。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q. 配信を停止したい場合はどうすればよいですか？</h3>
+                        <p class="faq-answer">A. LINEの友だち削除、または配信停止のメッセージを送信することで、いつでも簡単に配信を停止できます。再開も同様に簡単に行えます。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Q. 情報の正確性は保証されていますか？</h3>
+                        <p class="faq-answer">A. 当サービスは公開情報を整理・要約するものであり、情報の完全な正確性を保証するものではありません。重要な判断を行う際は、必ず元の情報源を確認することをお勧めします。</p>
+                    </div>
+                </div>
             </div>
         </section>
         <!-- Final CTA Section: Main call-to-action with trust indicators -->
@@ -197,67 +300,117 @@
         
         // IIFE (Immediately Invoked Function Expression) to avoid global scope pollution
         (function(){
-            // DOM Element References: Get modal and button elements
-            const quizModal=document.getElementById('quizModal'),confirmModal=document.getElementById('confirmModal');
-            const quizClose=document.getElementById('quizClose'),confirmClose=document.getElementById('confirmClose');
-            const confirmTitle=document.getElementById('confirmTitle');
+            'use strict';
             
-            // Modal Control Functions: Open/close quiz modal and confirmation modal (with null checks)
-            const openQuiz=()=>{if(quizModal)quizModal.classList.add('active');document.body.style.overflow='hidden';};
-            const closeQuiz=()=>{if(quizModal)quizModal.classList.remove('active');document.body.style.overflow='';};
-            const openConfirm=(name)=>{if(confirmTitle)confirmTitle.textContent=`「${name}」の情報サンプル`;if(confirmModal)confirmModal.classList.add('active');};
-            const closeConfirm=()=>{if(confirmModal)confirmModal.classList.remove('active');};
+            // DOM Element References: Cache frequently accessed elements
+            const quizModal = document.getElementById('quizModal');
+            const confirmModal = document.getElementById('confirmModal');
+            const quizClose = document.getElementById('quizClose');
+            const confirmClose = document.getElementById('confirmClose');
+            const confirmTitle = document.getElementById('confirmTitle');
+            const quizTrigger = document.getElementById('quizTrigger');
+            const finalCtaBtn = document.querySelector('.final-cta-btn');
+            const customSampleBtn = document.getElementById('customSampleBtn');
             
-            // Event Listeners: Main CTA buttons to open quiz modal (with null checks for safety)
-            const quizTrigger=document.getElementById('quizTrigger'),finalCtaBtn=document.querySelector('.final-cta-btn');
-            if(quizTrigger)quizTrigger.addEventListener('click',openQuiz);
-            if(finalCtaBtn)finalCtaBtn.addEventListener('click',openQuiz);
+            // Modal Control Functions
+            const openQuiz = () => {
+                if(quizModal) {
+                    quizModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            };
             
-            // Event Listeners: Close buttons for modals (with null checks)
-            if(quizClose)quizClose.addEventListener('click',closeQuiz);
-            if(confirmClose)confirmClose.addEventListener('click',closeConfirm);
+            const closeQuiz = () => {
+                if(quizModal) {
+                    quizModal.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            };
             
-            // Event Listeners: Close modals when clicking outside (on backdrop) - with null checks
-            if(quizModal)quizModal.addEventListener('click',e=>e.target===quizModal&&closeQuiz());
-            if(confirmModal)confirmModal.addEventListener('click',e=>e.target===confirmModal&&closeConfirm());
+            const openConfirm = (name) => {
+                if(confirmTitle && name) {
+                    confirmTitle.textContent = `「${name}」の情報サンプル`;
+                }
+                if(confirmModal) {
+                    confirmModal.classList.add('active');
+                }
+            };
+            
+            const closeConfirm = () => {
+                if(confirmModal) {
+                    confirmModal.classList.remove('active');
+                }
+            };
+            
+            // Event Listeners: Main CTA buttons
+            if(quizTrigger) quizTrigger.addEventListener('click', openQuiz);
+            if(finalCtaBtn) finalCtaBtn.addEventListener('click', openQuiz);
+            
+            // Event Listeners: Close buttons
+            if(quizClose) quizClose.addEventListener('click', closeQuiz);
+            if(confirmClose) confirmClose.addEventListener('click', closeConfirm);
+            
+            // Event Listeners: Close modals when clicking outside (backdrop)
+            if(quizModal) {
+                quizModal.addEventListener('click', (e) => {
+                    if(e.target === quizModal) closeQuiz();
+                });
+            }
+            
+            if(confirmModal) {
+                confirmModal.addEventListener('click', (e) => {
+                    if(e.target === confirmModal) closeConfirm();
+                });
+            }
             
             // Keyboard Support: Close modals with Escape key
-            document.addEventListener('keydown',e=>{
-                if(e.key==='Escape'){
-                    if(confirmModal&&confirmModal.classList.contains('active'))closeConfirm();
-                    else if(quizModal&&quizModal.classList.contains('active'))closeQuiz();
+            document.addEventListener('keydown', (e) => {
+                if(e.key === 'Escape') {
+                    if(confirmModal && confirmModal.classList.contains('active')) {
+                        closeConfirm();
+                    } else if(quizModal && quizModal.classList.contains('active')) {
+                        closeQuiz();
+                    }
                 }
             });
             
-            // Event Listeners: View sample buttons - Two-step flow (quiz -> confirmation)
-            document.querySelectorAll('.view-sample-btn').forEach(btn=>{
-                btn.addEventListener('click',e=>{
+            // Event Listeners: View sample buttons
+            document.querySelectorAll('.view-sample-btn').forEach((btn) => {
+                btn.addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const name=btn.getAttribute('data-name');
+                    const name = btn.getAttribute('data-name');
                     closeQuiz();
-                    setTimeout(()=>openConfirm(name),300);
+                    setTimeout(() => openConfirm(name), 300);
                 });
             });
             
-            // Event Listeners: Theme selection radio buttons - Show custom sample button when selected
-            document.querySelectorAll('input[name="investment-theme"]').forEach(o=>o.addEventListener('change',function(){if(this.checked){const btn=document.getElementById('customSampleBtn');if(btn)btn.classList.add('show');}}));
-            
-            // Event Listener: Custom sample button - Directly opens confirmation modal (skips quiz modal completely)
-            const customSampleBtn=document.getElementById('customSampleBtn');
-            if(customSampleBtn)customSampleBtn.addEventListener('click',function(){
-                const t=document.querySelector('input[name="investment-theme"]:checked');
-                if(t){
-                    // If quiz modal is open, close it first, then open confirmation modal
-                    // If quiz modal is not open, directly open confirmation modal
-                    const isQuizOpen=quizModal&&quizModal.classList.contains('active');
-                    if(isQuizOpen)closeQuiz();
-                    setTimeout(()=>{
-                        const themeName=t.labels[0].textContent.split('\\n')[0];
-                        if(confirmTitle)confirmTitle.textContent=`「${themeName}」の情報サンプル`;
-                        openConfirm(themeName);
-                    },isQuizOpen?300:0);
-                }
+            // Event Listeners: Theme selection radio buttons
+            document.querySelectorAll('input[name="investment-theme"]').forEach((radio) => {
+                radio.addEventListener('change', function() {
+                    if(this.checked && customSampleBtn) {
+                        customSampleBtn.classList.add('show');
+                    }
+                });
             });
+            
+            // Event Listener: Custom sample button
+            if(customSampleBtn) {
+                customSampleBtn.addEventListener('click', function() {
+                    const selectedTheme = document.querySelector('input[name="investment-theme"]:checked');
+                    if(selectedTheme) {
+                        const isQuizOpen = quizModal && quizModal.classList.contains('active');
+                        if(isQuizOpen) closeQuiz();
+                        
+                        setTimeout(() => {
+                            const themeName = selectedTheme.labels[0].textContent.split('\n')[0];
+                            if(confirmTitle) {
+                                confirmTitle.textContent = `「${themeName}」の情報サンプル`;
+                            }
+                            openConfirm(themeName);
+                        }, isQuizOpen ? 300 : 0);
+                    }
+                });
+            }
         })();
     </script>
 </body>
