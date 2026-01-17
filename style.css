@@ -13,8 +13,12 @@ body{font-family:'Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,s
 
 .container{width:100%;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;position:relative;padding:1rem}
 
-/* AI Visual Element: Decorative neural network visualization */
-.ai-visual{position:relative;width:220px;height:220px;margin:2rem 0 0.8rem 0;flex-shrink:0}
+/* AI Visual Element: Logo/Avatar image */
+.ai-visual{position:relative;width:220px;height:220px;margin:2rem 0 0.8rem 0;flex-shrink:0;display:flex;justify-content:center;align-items:center}
+/* Logo image styles - reserved for future use if image file is added */
+.logo-image{width:100%;height:100%;object-fit:contain;border-radius:50%;box-shadow:0 0 30px rgba(59,130,246,0.3),0 0 60px rgba(59,130,246,0.15);animation:fadeInDown 0.6s ease-out;background:transparent;padding:10px;display:none}
+.logo-image[src]{display:block}
+.logo-svg{width:100%;height:100%;filter:drop-shadow(0 0 20px rgba(59,130,246,0.4)) drop-shadow(0 0 40px rgba(59,130,246,0.2));animation:fadeInDown 0.6s ease-out}
 
 /* Animation Keyframes: Reusable animations for smooth transitions */
 @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
@@ -28,26 +32,7 @@ body{font-family:'Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,s
     .content{animation:fadeInUp 0.8s ease-out 0.2s both}
 }
 
-.ai-brain,.neural-network{width:100%;height:100%;position:relative}
-.ai-brain{display:flex;justify-content:center;align-items:center}
-
-.node{position:absolute;width:14px;height:14px;background:var(--primary);border-radius:50%;box-shadow:0 0 15px var(--primary-rgba),0 0 30px var(--primary-light)}
-
-.node-1{top:20%;left:30%}
-.node-2{top:20%;right:30%}
-.node-3{top:50%;left:20%}
-.node-4{top:50%;right:20%}
-.node-5{bottom:20%;left:35%}
-.node-6{bottom:20%;right:35%}
-
-.connection{position:absolute;height:1.5px;background:linear-gradient(90deg,rgba(0,212,255,0.3) 0%,var(--primary-rgba) 50%,rgba(0,212,255,0.3) 100%);transform-origin:left center}
-
-.conn-1,.conn-2{top:25%;left:35%;width:30%}
-.conn-1{transform:rotate(15deg)}
-.conn-2{transform:rotate(-15deg)}
-.conn-3,.conn-4{top:55%;left:25%;width:50%}
-.conn-3{transform:rotate(10deg)}
-.conn-4{transform:rotate(-10deg)}
+/* Removed unused neural network styles - now using SVG logo */
 
 
 .content{text-align:center;z-index:10;position:relative;flex-shrink:0;padding:0 1rem;width:100%;display:block}
@@ -74,8 +59,6 @@ body{font-family:'Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,s
     .features-section{flex-wrap:nowrap;gap:0.8rem;justify-content:space-between}
     .feature-icon{font-size:2rem}
     .feature-text{font-size:0.7rem}
-    .node{width:18px;height:18px;background:var(--primary)}
-    .connection{height:2px}
 }
 
 /* Responsive Design: Desktop optimization (min-width: 769px) */
@@ -87,7 +70,6 @@ body{font-family:'Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,s
     .features-section{flex-wrap:nowrap;gap:1rem;justify-content:space-between;max-width:800px}
     .feature-icon{font-size:2.2rem}
     .feature-text{font-size:0.75rem}
-    .node{width:20px;height:20px;background:var(--primary)}
 }
 
 /* Quiz Modal: First step modal for perspective selection */
@@ -255,6 +237,31 @@ body{font-family:'Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,s
 .page-footer{text-align:center;padding:2.5rem 0 2rem;color:rgba(236,240,241,0.7);font-size:0.85rem;border-top:1px solid rgba(255,255,255,0.15);background:rgba(0,0,0,0.2);margin-top:2rem}
 .page-footer p{max-width:900px;margin:0 auto;padding:0 1.5rem}
 
+/* How It Works Section: Service mechanism explanation */
+.how-it-works{background:linear-gradient(135deg,rgba(0,212,255,0.03) 0%,rgba(0,0,0,0.1) 50%,rgba(0,212,255,0.03) 100%);padding:4rem 0;margin-top:2rem;border-top:1px solid rgba(0,212,255,0.1);border-bottom:1px solid rgba(0,212,255,0.1)}
+.process-steps{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem;margin:2.5rem 0;max-width:1000px;margin:2.5rem auto 0}
+.process-step{flex:1;min-width:250px;background:linear-gradient(135deg,rgba(255,255,255,0.06) 0%,rgba(0,212,255,0.05) 100%);border-radius:18px;padding:2rem;border:1px solid rgba(0,212,255,0.2);text-align:center;transition:transform 0.3s ease,box-shadow 0.3s ease;box-shadow:0 6px 18px rgba(0,0,0,0.2)}
+.process-step:hover{transform:translateY(-5px);box-shadow:0 10px 25px rgba(0,0,0,0.3),0 0 20px rgba(0,212,255,0.15)}
+.step-number{width:50px;height:50px;background:linear-gradient(135deg,var(--primary),#00a8cc);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:700;margin:0 auto 1rem;box-shadow:0 4px 15px var(--primary-light)}
+.step-title{font-size:1.2rem;color:#ecf0f1;margin:0 0 1rem 0;font-weight:700}
+.step-description{font-size:0.9rem;color:rgba(236,240,241,0.85);line-height:1.6;margin:0}
+
+/* Use Cases Section: Detailed use case scenarios */
+.use-cases{background:linear-gradient(135deg,rgba(0,0,0,0.15) 0%,rgba(0,212,255,0.04) 50%,rgba(0,0,0,0.15) 100%);padding:4rem 0;border-top:1px solid rgba(0,212,255,0.08);border-bottom:1px solid rgba(0,212,255,0.08)}
+.use-case-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin:2.5rem 0;max-width:1000px;margin:2.5rem auto 0}
+.use-case-item{background:linear-gradient(135deg,rgba(255,255,255,0.06) 0%,rgba(0,212,255,0.04) 100%);border-radius:14px;padding:1.8rem;border:1px solid rgba(0,212,255,0.15);transition:transform 0.3s ease,box-shadow 0.3s ease;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.use-case-item:hover{transform:translateY(-3px);background:linear-gradient(135deg,rgba(255,255,255,0.1) 0%,rgba(0,212,255,0.08) 100%);border-color:var(--primary-light);box-shadow:0 8px 20px rgba(0,0,0,0.3)}
+.use-case-title{font-size:1.1rem;color:var(--primary);margin:0 0 0.8rem 0;font-weight:700}
+.use-case-text{font-size:0.9rem;color:rgba(236,240,241,0.9);line-height:1.6;margin:0}
+
+/* FAQ Section: Frequently asked questions */
+.faq-section{background:linear-gradient(135deg,rgba(0,212,255,0.05) 0%,rgba(0,0,0,0.12) 50%,rgba(0,212,255,0.05) 100%);padding:4rem 0;margin-top:2rem;border-top:1px solid rgba(0,212,255,0.1);border-bottom:1px solid rgba(0,212,255,0.1)}
+.faq-list{max-width:900px;margin:2.5rem auto 0;display:flex;flex-direction:column;gap:1.2rem}
+.faq-item{background:linear-gradient(135deg,rgba(255,255,255,0.06) 0%,rgba(0,212,255,0.04) 100%);border-radius:14px;padding:1.8rem;border:1px solid rgba(0,212,255,0.15);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:border-color 0.3s ease}
+.faq-item:hover{border-color:var(--primary-light)}
+.faq-question{font-size:1.05rem;color:#ecf0f1;margin:0 0 0.8rem 0;font-weight:700;line-height:1.4}
+.faq-answer{font-size:0.9rem;color:rgba(236,240,241,0.85);line-height:1.7;margin:0;padding-left:0.5rem;border-left:3px solid var(--primary-light)}
+
 /* Responsive Design: Tablet and below (max-width: 768px) */
 @media (max-width:768px){
     .section-container{padding:2rem 1rem}
@@ -270,6 +277,10 @@ body{font-family:'Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,s
     .confirm-title{font-size:1.2rem}
     .confirm-description{font-size:0.9rem;margin-bottom:1.5rem}
     .confirm-line-btn{padding:1rem 1.5rem;font-size:0.95rem}
+    .process-steps{flex-direction:column;gap:1.5rem}
+    .process-step{min-width:auto}
+    .use-case-list{grid-template-columns:1fr}
+    .faq-list{gap:1rem}
 }
 
 @media (max-width:480px){
@@ -279,5 +290,17 @@ body{font-family:'Segoe UI','Hiragino Kaku Gothic ProN','Hiragino Sans',Meiryo,s
     .confirm-description{font-size:0.85rem;margin-bottom:1.2rem}
     .confirm-line-btn{padding:0.95rem 1.2rem;font-size:0.9rem;max-width:100%}
     .confirm-close{width:32px;height:32px;font-size:1.4rem;top:0.8rem;right:0.8rem}
+    .process-steps{flex-direction:column;gap:1.2rem}
+    .process-step{padding:1.5rem}
+    .step-number{width:45px;height:45px;font-size:1.3rem}
+    .step-title{font-size:1.1rem}
+    .step-description{font-size:0.85rem}
+    .use-case-list{grid-template-columns:1fr;gap:1rem}
+    .use-case-item{padding:1.5rem}
+    .use-case-title{font-size:1rem}
+    .use-case-text{font-size:0.85rem}
+    .faq-item{padding:1.5rem}
+    .faq-question{font-size:0.95rem}
+    .faq-answer{font-size:0.85rem}
 }
 
